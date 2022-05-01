@@ -44,6 +44,10 @@ const editPostSchema = Joi.object({
 });
 
 const reviewPostSchema = Joi.object({
+    rate:Joi.number()
+        .min(1)
+        .max(5),
+        
     reason:Joi.string()
         .empty('')
 });
